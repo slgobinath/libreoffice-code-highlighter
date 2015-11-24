@@ -28,7 +28,7 @@ Open the LibreOffice Writer and goto Tools -> Customize -> Keyboard
 - Select *share/Highlight/Highlight_source_code* under the Functions Category
 - Click on the Modify button to set the shortcut
 
-![Assign Shortcut](https://raw.githubusercontent.com/slgobinath/libreoffice-code-highlighter/master/Screenshots/Assign_Keyboard_Shortcut.png)
+<img src="https://raw.githubusercontent.com/slgobinath/libreoffice-code-highlighter/master/Screenshots/Assign_Keyboard_Shortcut.png" width="600">
 
 ## Usage
 ### LibreOffice Impress
@@ -41,20 +41,20 @@ Open the LibreOffice Writer and goto Tools -> Customize -> Keyboard
 - Select the Text Box.
 - Use your shortcut keys to execute the macro.
 
-![New Style](https://github.com/slgobinath/libreoffice-code-highlighter/blob/master/Screenshots/Impress_New_Style.png)
+<img src="https://github.com/slgobinath/libreoffice-code-highlighter/blob/master/Screenshots/Impress_New_Style.png" width="600">
 
-![Apply Style](https://github.com/slgobinath/libreoffice-code-highlighter/blob/master/Screenshots/Impress_Apply_Style.png)
+<img src="https://github.com/slgobinath/libreoffice-code-highlighter/blob/master/Screenshots/Impress_Apply_Style.png" width="600">
 
 ### LibreOffice Writer/Calc
 - Open LibreOffice Writer/Calc.
 - Insert a Text Box (Insert -> Text Box).
 - Copy and paste any code snippet into that Text Box.
 - Right click on the Text Box and select 'Description'.
-- Add a description in the following format: code-<language>
+- Add a description in the following format: code-\<language\>
 - Select the Text Box
 - Use your shortcut keys to execute the macro.
 
-![Add Description](https://github.com/slgobinath/libreoffice-code-highlighter/blob/master/Screenshots/Writter_Add_Description.png)
+<img src="https://github.com/slgobinath/libreoffice-code-highlighter/blob/master/Screenshots/Writter_Add_Description.png" width="600">
 
 ## Credits
 This macro is developed using the following two sources:
