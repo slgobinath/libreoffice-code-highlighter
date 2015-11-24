@@ -27,9 +27,9 @@ Open the LibreOffice Writer and goto Tools -> Customize -> Keyboard
 - Select any desired shortcut
 - Select *share/Highlight/Highlight_source_code* under the Functions Category
 - Click on the Modify button to set the shortcut
-
-<img src="https://raw.githubusercontent.com/slgobinath/libreoffice-code-highlighter/master/Screenshots/Assign_Keyboard_Shortcut.png" width="600">
-
+<p align="center">
+<img src="https://raw.githubusercontent.com/slgobinath/libreoffice-code-highlighter/master/Screenshots/Assign_Keyboard_Shortcut.png" align="center" width="600">
+</p>
 ## Usage
 ### LibreOffice Impress
 - Open LibreOffice Impress.
@@ -41,9 +41,12 @@ Open the LibreOffice Writer and goto Tools -> Customize -> Keyboard
 - Select the Text Box.
 - Use your shortcut keys to execute the macro.
 
-<img src="https://github.com/slgobinath/libreoffice-code-highlighter/blob/master/Screenshots/Impress_New_Style.png" width="600">
-
-<img src="https://github.com/slgobinath/libreoffice-code-highlighter/blob/master/Screenshots/Impress_Apply_Style.png" width="600">
+<p align="center">
+<img src="https://github.com/slgobinath/libreoffice-code-highlighter/blob/master/Screenshots/Impress_New_Style.png" align="center" width="600">
+</p>
+<p align="center">
+<img src="https://github.com/slgobinath/libreoffice-code-highlighter/blob/master/Screenshots/Impress_Apply_Style.png" align="center" width="600">
+</p>
 
 ### LibreOffice Writer/Calc
 - Open LibreOffice Writer/Calc.
@@ -54,7 +57,9 @@ Open the LibreOffice Writer and goto Tools -> Customize -> Keyboard
 - Select the Text Box
 - Use your shortcut keys to execute the macro.
 
-<img src="https://github.com/slgobinath/libreoffice-code-highlighter/blob/master/Screenshots/Writter_Add_Description.png" width="600">
+<p align="center">
+<img src="https://github.com/slgobinath/libreoffice-code-highlighter/blob/master/Screenshots/Writter_Add_Description.png" align="center" width="600">
+</p>
 
 ## Credits
 This macro is developed using the following two sources:
