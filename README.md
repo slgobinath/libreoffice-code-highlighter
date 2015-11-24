@@ -61,6 +61,11 @@ Open the LibreOffice Writer and goto Tools -> Customize -> Keyboard
 <img src="https://github.com/slgobinath/libreoffice-code-highlighter/blob/master/Screenshots/Writter_Add_Description.png" align="center" width="600">
 </p>
 
+## Supported Languages
+Since this macro uses Python pygments syntax highlighter, it supports all the languages which are supported by pygments. Please visit to the pygments' site to see the list of languages.
+
+[Supported languages](http://pygments.org/languages)
+
 ## Credits
 This macro is developed using the following two sources:
 - [impress-code-highlighter](https://github.com/stummjr/impress-code-highlighter)
