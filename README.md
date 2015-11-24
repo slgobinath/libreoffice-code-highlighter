@@ -26,8 +26,9 @@ Open the LibreOffice Writer and goto Tools -> Customize -> Keyboard
 - Select the LibreOffice option button (Available on top left corner)
 - Select any desired shortcut
 - Select *share/Highlight/Highlight_source_code* under the Functions Category
-- Click on the Modify button to set the short-cut
+- Click on the Modify button to set the shortcut
 
+![Assign Shortcut](https://raw.githubusercontent.com/slgobinath/libreoffice-code-highlighter/master/Screenshots/Assign_Keyboard_Shortcut.png)
 
 ## Usage
 ### LibreOffice Impress
@@ -38,7 +39,11 @@ Open the LibreOffice Writer and goto Tools -> Customize -> Keyboard
 - Name the Style as code-\<language\>
 - Apply the style to your code snippet Text Box.
 - Select the Text Box.
-- Use your short-cut keys to execute the macro.
+- Use your shortcut keys to execute the macro.
+
+![New Style](https://github.com/slgobinath/libreoffice-code-highlighter/blob/master/Screenshots/Impress_New_Style.png)
+
+![Apply Style](https://github.com/slgobinath/libreoffice-code-highlighter/blob/master/Screenshots/Impress_Apply_Style.png)
 
 ### LibreOffice Writer/Calc
 - Open LibreOffice Writer/Calc.
@@ -47,8 +52,9 @@ Open the LibreOffice Writer and goto Tools -> Customize -> Keyboard
 - Right click on the Text Box and select 'Description'.
 - Add a description in the following format: code-<language>
 - Select the Text Box
-- Use your short-cut keys to execute the macro.
+- Use your shortcut keys to execute the macro.
 
+![Add Description](https://github.com/slgobinath/libreoffice-code-highlighter/blob/master/Screenshots/Writter_Add_Description.png)
 
 ## Credits
 This macro is developed using the following two sources:
