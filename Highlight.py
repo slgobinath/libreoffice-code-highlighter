@@ -14,24 +14,24 @@ def highlight_source_code(*args):
             box = selected_item.getByIndex(item_idx)
             if 'com.sun.star.drawing.Text' in box.SupportedServiceNames:
                 # Extract the language name.
-                lang = ''
-                # For Libreoffice Writer, check the Description attribute of the textbox
+                smt = ''
                 try:
-                    if box.Description.lower().find("code-") == 0:
-                        lang = box.Description.lower().replace("code-", "")
+                    # Libreoffice Writer and Calc have the Description attribute
+                    smt = box.Description.lower()
                 except Exception as err:
-                    lang = ''
+                    smt = ''
 
-                # For Libreoffice Impress, check the Style attribute of the textbox
-                if not lang:
+                if not smt:
                     try:
-                        if box.Style.getName().lower().find("code-") == 0:
-                            lang = box.Style.getName().lower().replace("code-", "")
+                        # Libreoffice Impress has Style attribute not Description
+                        smt = box.Style.getName().lower()
                     except Exception as err:
-                        lang = ''
+                        smt = ''
 
-                if lang:
-                    highlight_code(lang, box)
+                if smt:
+                    if smt.find("code-") == 0:
+                        lang = smt.replace("code-", "")
+                        highlight_code(lang, box)
 
 
 def rgb(r, g, b):

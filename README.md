@@ -36,7 +36,7 @@ Open the LibreOffice Writer and goto Tools -> Customize -> Keyboard
 - Insert a Text Box (Insert -> Text Box).
 - Copy and paste any code snippet into that Text Box.
 - Create a new Style (Right click on an existing style -> New...)
-- Name the Style as code-\<language\>
+- Name the Style using the following case insensitive format: code-\<language\>
 - Apply the style to your code snippet Text Box.
 - Select the Text Box.
 - Use your shortcut keys to execute the macro.
@@ -53,7 +53,7 @@ Open the LibreOffice Writer and goto Tools -> Customize -> Keyboard
 - Insert a Text Box (Insert -> Text Box).
 - Copy and paste any code snippet into that Text Box.
 - Right click on the Text Box and select 'Description'.
-- Add a description in the following format: code-\<language\>
+- Add a description in the following case insensitive format: code-\<language\>
 - Select the Text Box
 - Use your shortcut keys to execute the macro.
 
