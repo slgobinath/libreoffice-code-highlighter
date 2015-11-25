@@ -17,16 +17,16 @@ def highlight_source_code(*args):
                 lang = ''
                 # For Libreoffice Writer, check the Description attribute of the textbox
                 try:
-                    if box.Description.find("code-") == 0:
-                        lang = box.Description.replace("code-", "")
+                    if box.Description.lower().find("code-") == 0:
+                        lang = box.Description.lower().replace("code-", "")
                 except Exception as err:
                     lang = ''
 
                 # For Libreoffice Impress, check the Style attribute of the textbox
                 if not lang:
                     try:
-                        if box.Style.getName().find("code-") == 0:
-                            lang = box.Style.getName().replace("code-", "")
+                        if box.Style.getName().lower().find("code-") == 0:
+                            lang = box.Style.getName().lower().replace("code-", "")
                     except Exception as err:
                         lang = ''
 
