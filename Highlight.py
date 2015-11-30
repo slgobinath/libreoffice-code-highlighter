@@ -1,5 +1,6 @@
 from pygments import styles
-from pygments.lexers import (get_lexer_by_name)
+from pygments.lexers import get_lexer_by_name
+from pygments.styles import get_all_styles
 
 
 def highlight_source_code(*args):
@@ -29,9 +30,25 @@ def highlight_source_code(*args):
                         smt = ''
 
                 if smt:
-                    if smt.find("code-") == 0:
-                        lang = smt.replace("code-", "")
-                        highlight_code(lang, box)
+                    if 'code-' in smt:
+                        # Remove the prefix code-
+                        lang = smt.replace('code-', '')
+                        # Default style
+                        style = 'default'
+
+                        # Check for explicit style. lang-style
+                        if '-' in lang:
+                            temp = lang.split('-')
+                            lang = temp[0]
+                            style = temp[1]
+
+                            # Check whether the style is supported by pygments
+                            supported_styles = list(get_all_styles())
+                            if(style not in supported_styles):
+                                # If the given style is not supported, use the default style
+                                style = 'default'
+
+                        highlight_code(style, lang, box)
 
 
 def rgb(r, g, b):
@@ -47,11 +64,11 @@ def to_rgbint(hex_str):
     return rgb(0, 0, 0)
 
 
-def highlight_code(lang, codebox):
+def highlight_code(style, lang, codebox):
     code = codebox.String
     lexer = get_lexer_by_name(lang)
     cursor = codebox.createTextCursor()
-    style = styles.get_style_by_name('default')
+    style = styles.get_style_by_name(style)
     cursor.gotoStart(False)
     for tok_type, tok_value in lexer.get_tokens(code):
         cursor.goRight(len(tok_value), True)  # selects the token's text

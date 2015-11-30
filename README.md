@@ -36,7 +36,8 @@ Open the LibreOffice Writer and goto Tools -> Customize -> Keyboard
 - Insert a Text Box (Insert -> Text Box).
 - Copy and paste any code snippet into that Text Box.
 - Create a new Style (Right click on an existing style -> New...)
-- Name the Style using the following case insensitive format: code-\<language\>
+- Name the Style using the following case insensitive format: code-\<language\> (Default style)
+- If you want to use custom styles, append the style at the end like: code-\<language\>-\<style\>
 - Apply the style to your code snippet Text Box.
 - Select the Text Box.
 - Use your shortcut keys to execute the macro.
@@ -53,7 +54,8 @@ Open the LibreOffice Writer and goto Tools -> Customize -> Keyboard
 - Insert a Text Box (Insert -> Text Box).
 - Copy and paste any code snippet into that Text Box.
 - Right click on the Text Box and select 'Description'.
-- Add a description in the following case insensitive format: code-\<language\>
+- Add a description in the following case insensitive format: code-\<language\> (Default style)
+- If you want to use custom styles, append the style at the end like: code-\<language\>-\<style\>
 - Select the Text Box
 - Use your shortcut keys to execute the macro.
 
@@ -65,6 +67,41 @@ Open the LibreOffice Writer and goto Tools -> Customize -> Keyboard
 Since this macro uses Python pygments syntax highlighter, it supports all the languages which are supported by pygments. Please visit to the pygments' site to see the list of languages.
 
 [Supported languages](http://pygments.org/languages)
+
+## Supported Styles
+Pygments ships some builtin styles which are maintained by the Pygments team. To get a list of known styles you can use this Python script:
+
+```
+from pygments.styles import get_all_styles
+print(list(get_all_styles()))
+```
+
+**Some built-in styles:**
+- monokai
+- manni
+- rrt
+- perldoc
+- borland
+- colorful
+- default
+- murphy
+- vs
+- trac
+- tango
+- fruity
+- autumn
+- bw
+- emacs
+- vim
+- pastie
+- friendly
+- native
+
+<p align="center">
+<img src="https://github.com/slgobinath/libreoffice-code-highlighter/blob/master/Screenshots/Writter_Emacs_Style.png" align="center" width="600">
+</p>
+
+For more details: [Pygments Styles](http://pygments.org/docs/styles/)
 
 ## Credits
 This macro is developed using the following two sources:
