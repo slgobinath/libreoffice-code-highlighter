@@ -30,6 +30,7 @@ Open the LibreOffice Writer and goto Tools -> Customize -> Keyboard
 <p align="center">
 <img src="https://raw.githubusercontent.com/slgobinath/libreoffice-code-highlighter/master/Screenshots/Assign_Keyboard_Shortcut.png" align="center" width="600">
 </p>
+
 ## Usage
 ### LibreOffice Impress
 - Open LibreOffice Impress.
