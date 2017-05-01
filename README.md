@@ -9,7 +9,7 @@ sudo apt-get install libreoffice-script-provider-python
 
 Install pygments for Python 3:
 ```
-sudo pip3 install python3-pygments
+sudo pip3 install pygments
 ```
 
 Copy the Highlight.py to /usr/lib/libreoffice/share/Scripts/python/
