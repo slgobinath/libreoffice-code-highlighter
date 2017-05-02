@@ -1,0 +1,2 @@
+Highlight over 350 languages in Libre Office.
+Copy and paste your code in a Text Box, select the text box and select Tools -> Highlight Code -> <Language>
