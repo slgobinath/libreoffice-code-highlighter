@@ -59,8 +59,12 @@ def highlight_code(style, lang, codebox):
     cursor.gotoStart(False)
     for tok_type, tok_value in lexer.get_tokens(code):
         cursor.goRight(len(tok_value), True)  # selects the token's text
-        cursor.CharColor = to_rgbint(style.style_for_token(tok_type)['color'])
-        cursor.goRight(0, False)  # deselects the selected text
+        try:
+            cursor.CharColor = to_rgbint(style.style_for_token(tok_type)['color'])
+        except Exception as e:
+            pass
+        finally:
+            cursor.goRight(0, False)  # deselects the selected text
 
 
 def highlight_abap_default(*args):
