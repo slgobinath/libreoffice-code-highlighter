@@ -2,6 +2,9 @@
 Code snippet highlighter for LibreOffice Writer and Impress.
 
 ## Installation
+
+**Note: Close all the LibreOffice products before installing the dependencies**
+
 Install libreoffice-script-provider-python
 ```
 sudo apt-get install libreoffice-script-provider-python
