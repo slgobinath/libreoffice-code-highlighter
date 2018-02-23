@@ -27,14 +27,14 @@ def highlightSourceCode(lang, style):
     doc = ctx.getDocument()
     # Get the selected item
     selected_item = doc.getCurrentController().getSelection()
-    # Validate that the selected item is a Shape
-    if 'com.sun.star.drawing.Shapes' in selected_item.getSupportedServiceNames():
-        for item_idx in range(selected_item.getCount()):
-            # Get the textbox from the shape
-            box = selected_item.getByIndex(item_idx)
-            if 'com.sun.star.drawing.Text' in box.SupportedServiceNames:
-                # Extract the language name.
-                highlight_code(style, lang, box)
+    for item_idx in range(selected_item.getCount()):
+        # Get the textbox from the shape
+        box = selected_item.getByIndex(item_idx)
+        if 'com.sun.star.drawing.Text' in box.SupportedServiceNames:
+            # Extract the language name.
+            highlight_code(style, lang, box)
+        else:
+            hilite_code_string(style, lang, box)
 
 
 def rgb(r, g, b):
@@ -66,6 +66,17 @@ def highlight_code(style, lang, codebox):
         finally:
             cursor.goRight(0, False)  # deselects the selected text
 
+def hilite_code_string(style, lang, xTextRange):
+    lexer = get_lexer_by_name(lang)
+    style = styles.get_style_by_name(style)
+    code  = xTextRange.getString()
+    xText = xTextRange.getText()
+    cursor = xText.createTextCursorByRange(xTextRange)
+    cursor.goLeft(0, False)
+    for tok_type, tok_value in lexer.get_tokens(code):
+        cursor.goRight(len(tok_value), True)  # selects the token's text
+        cursor.CharColor = to_rgbint(style.style_for_token(tok_type)['color'])
+        cursor.goRight(0, False)  # deselects the selected text
 
 def highlight_abap_default(*args):
     highlightSourceCode('abap', 'default')
