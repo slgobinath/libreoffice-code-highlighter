@@ -18,8 +18,9 @@
 ~ You should have received a copy of the GNU General Public License
 ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
-
-<oor:component-data oor:name="Addons" oor:package="org.openoffice.Office" xmlns:oor="http://openoffice.org/2001/registry" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<oor:component-data oor:name="Addons" oor:package="org.openoffice.Office" 
+    xmlns:oor="http://openoffice.org/2001/registry" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <node oor:name="AddonUI">
         <node oor:name="OfficeMenuBarMerging">
             <node oor:name="javahelps.codehighlighter" oor:op="replace">
@@ -46,7 +47,21 @@
                                 <value>Highlight Code</value>
                             </prop>
                             <node oor:name="Submenu">
-                                                                    <node oor:name="lang_1" oor:op="replace">
+                                <node oor:name="lang_0" oor:op="replace">
+                                    <prop oor:name="Context" oor:type="xs:string">
+                                        <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
+                                    </prop>
+                                    <prop oor:name="Title" oor:type="xs:string">
+                                        <value xml:lang="en">Automatic</value>
+                                    </prop>
+                                    <prop oor:name="URL" oor:type="xs:string">
+                                        <value>vnd.sun.star.script:codehighlighter.oxt|python|highlight.py$highlight_automatic_default?language=Python&amp;location=user:uno_packages</value>
+                                    </prop>
+                                    <prop oor:name="Target" oor:type="xs:string">
+                                        <value>_self</value>
+                                    </prop>
+                                </node>
+                                <node oor:name="lang_1" oor:op="replace">
                                     <prop oor:name="Context" oor:type="xs:string">
                                         <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                     </prop>
@@ -5352,7 +5367,6 @@
                                         <value>_self</value>
                                     </prop>
                                 </node>
-
                             </node>
                         </node>
                     </node>

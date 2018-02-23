@@ -59,8 +59,10 @@ def highlightSourceCode(lang, style):
 
 
 def highlight_code(code, cursor, lang, style):
-    lexer = get_lexer_by_name(lang)
-    # lexer = guess_lexer(code)
+    if lang is None:
+        lexer = guess_lexer(code)
+    else:
+        lexer = get_lexer_by_name(lang)
     style = styles.get_style_by_name(style)
     for tok_type, tok_value in lexer.get_tokens(code):
         cursor.goRight(len(tok_value), True)  # selects the token's text
@@ -72,6 +74,8 @@ def highlight_code(code, cursor, lang, style):
         finally:
             cursor.goRight(0, False)  # deselects the selected text
 
+def highlight_automatic_default(*args):
+    highlightSourceCode(None, 'default')
 
 def highlight_abap_default(*args):
     highlightSourceCode('abap', 'default')
