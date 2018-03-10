@@ -678,35 +678,7 @@
                                     </prop>
                                     <node oor:name="Submenu">
                                         <!-- Languages starting with alphabet C -->
-                                        <node oor:name="lang_42" oor:op="replace">
-                                            <prop oor:name="Context" oor:type="xs:string">
-                                                <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
-                                            </prop>
-                                            <prop oor:name="Title" oor:type="xs:string">
-                                                <value xml:lang="en">C#</value>
-                                            </prop>
-                                            <prop oor:name="URL" oor:type="xs:string">
-                                                <value>vnd.sun.star.script:codehighlighter.oxt|python|highlight.py$highlight_csharp_default?language=Python&amp;location=user:uno_packages</value>
-                                            </prop>
-                                            <prop oor:name="Target" oor:type="xs:string">
-                                                <value>_self</value>
-                                            </prop>
-                                        </node>
-                                        <node oor:name="lang_43" oor:op="replace">
-                                            <prop oor:name="Context" oor:type="xs:string">
-                                                <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
-                                            </prop>
-                                            <prop oor:name="Title" oor:type="xs:string">
-                                                <value xml:lang="en">C-Objdump</value>
-                                            </prop>
-                                            <prop oor:name="URL" oor:type="xs:string">
-                                                <value>vnd.sun.star.script:codehighlighter.oxt|python|highlight.py$highlight_c_objdump_default?language=Python&amp;location=user:uno_packages</value>
-                                            </prop>
-                                            <prop oor:name="Target" oor:type="xs:string">
-                                                <value>_self</value>
-                                            </prop>
-                                        </node>
-                                        <node oor:name="lang_44" oor:op="replace">
+                                        <node oor:name="lang_c_1" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -720,7 +692,49 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_45" oor:op="replace">
+                                        <node oor:name="lang_c_2" oor:op="replace">
+                                            <prop oor:name="Context" oor:type="xs:string">
+                                                <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
+                                            </prop>
+                                            <prop oor:name="Title" oor:type="xs:string">
+                                                <value xml:lang="en">C++</value>
+                                            </prop>
+                                            <prop oor:name="URL" oor:type="xs:string">
+                                                <value>vnd.sun.star.script:codehighlighter.oxt|python|highlight.py$highlight_cpp_default?language=Python&amp;location=user:uno_packages</value>
+                                            </prop>
+                                            <prop oor:name="Target" oor:type="xs:string">
+                                                <value>_self</value>
+                                            </prop>
+                                        </node>
+                                        <node oor:name="lang_c_3" oor:op="replace">
+                                            <prop oor:name="Context" oor:type="xs:string">
+                                                <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
+                                            </prop>
+                                            <prop oor:name="Title" oor:type="xs:string">
+                                                <value xml:lang="en">C#</value>
+                                            </prop>
+                                            <prop oor:name="URL" oor:type="xs:string">
+                                                <value>vnd.sun.star.script:codehighlighter.oxt|python|highlight.py$highlight_csharp_default?language=Python&amp;location=user:uno_packages</value>
+                                            </prop>
+                                            <prop oor:name="Target" oor:type="xs:string">
+                                                <value>_self</value>
+                                            </prop>
+                                        </node>
+                                        <node oor:name="lang_c_4" oor:op="replace">
+                                            <prop oor:name="Context" oor:type="xs:string">
+                                                <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
+                                            </prop>
+                                            <prop oor:name="Title" oor:type="xs:string">
+                                                <value xml:lang="en">C-Objdump</value>
+                                            </prop>
+                                            <prop oor:name="URL" oor:type="xs:string">
+                                                <value>vnd.sun.star.script:codehighlighter.oxt|python|highlight.py$highlight_c_objdump_default?language=Python&amp;location=user:uno_packages</value>
+                                            </prop>
+                                            <prop oor:name="Target" oor:type="xs:string">
+                                                <value>_self</value>
+                                            </prop>
+                                        </node>
+                                        <node oor:name="lang_c_5" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -734,7 +748,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_46" oor:op="replace">
+                                        <node oor:name="lang_c_6" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -748,7 +762,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_47" oor:op="replace">
+                                        <node oor:name="lang_c_7" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -762,7 +776,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_48" oor:op="replace">
+                                        <node oor:name="lang_c_8" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -776,7 +790,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_49" oor:op="replace">
+                                        <node oor:name="lang_c_9" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -790,7 +804,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_50" oor:op="replace">
+                                        <node oor:name="lang_c_10" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -804,7 +818,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_51" oor:op="replace">
+                                        <node oor:name="lang_c_11" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -818,7 +832,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_52" oor:op="replace">
+                                        <node oor:name="lang_c_12" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -832,7 +846,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_53" oor:op="replace">
+                                        <node oor:name="lang_c_13" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -846,7 +860,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_54" oor:op="replace">
+                                        <node oor:name="lang_c_14" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -860,7 +874,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_55" oor:op="replace">
+                                        <node oor:name="lang_c_15" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -874,7 +888,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_56" oor:op="replace">
+                                        <node oor:name="lang_c_16" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -888,7 +902,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_57" oor:op="replace">
+                                        <node oor:name="lang_c_17" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -902,7 +916,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_58" oor:op="replace">
+                                        <node oor:name="lang_c_18" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -916,7 +930,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_59" oor:op="replace">
+                                        <node oor:name="lang_c_19" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -930,7 +944,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_60" oor:op="replace">
+                                        <node oor:name="lang_c_20" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -944,7 +958,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_61" oor:op="replace">
+                                        <node oor:name="lang_c_21" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -958,7 +972,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_62" oor:op="replace">
+                                        <node oor:name="lang_c_22" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -972,7 +986,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_63" oor:op="replace">
+                                        <node oor:name="lang_c_23" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -986,7 +1000,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_64" oor:op="replace">
+                                        <node oor:name="lang_c_24" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -1000,7 +1014,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_65" oor:op="replace">
+                                        <node oor:name="lang_c_25" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -1014,7 +1028,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_66" oor:op="replace">
+                                        <node oor:name="lang_c_26" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -1028,7 +1042,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_67" oor:op="replace">
+                                        <node oor:name="lang_c_27" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -1042,7 +1056,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_68" oor:op="replace">
+                                        <node oor:name="lang_c_28" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -1056,7 +1070,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_69" oor:op="replace">
+                                        <node oor:name="lang_c_29" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -1070,7 +1084,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_70" oor:op="replace">
+                                        <node oor:name="lang_c_30" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -1084,7 +1098,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_71" oor:op="replace">
+                                        <node oor:name="lang_c_31" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -1098,7 +1112,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_72" oor:op="replace">
+                                        <node oor:name="lang_c_32" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -1112,7 +1126,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_73" oor:op="replace">
+                                        <node oor:name="lang_c_33" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -1126,7 +1140,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_74" oor:op="replace">
+                                        <node oor:name="lang_c_34" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -1140,7 +1154,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_75" oor:op="replace">
+                                        <node oor:name="lang_c_35" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -1154,7 +1168,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_76" oor:op="replace">
+                                        <node oor:name="lang_c_36" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -1168,7 +1182,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_77" oor:op="replace">
+                                        <node oor:name="lang_c_37" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -1182,7 +1196,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_78" oor:op="replace">
+                                        <node oor:name="lang_c_38" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -1196,7 +1210,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_79" oor:op="replace">
+                                        <node oor:name="lang_c_39" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -1210,7 +1224,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_80" oor:op="replace">
+                                        <node oor:name="lang_c_40" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -1224,7 +1238,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_81" oor:op="replace">
+                                        <node oor:name="lang_c_41" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -1238,7 +1252,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_82" oor:op="replace">
+                                        <node oor:name="lang_c_42" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
@@ -1252,7 +1266,7 @@
                                                 <value>_self</value>
                                             </prop>
                                         </node>
-                                        <node oor:name="lang_83" oor:op="replace">
+                                        <node oor:name="lang_c_43" oor:op="replace">
                                             <prop oor:name="Context" oor:type="xs:string">
                                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                                             </prop>
