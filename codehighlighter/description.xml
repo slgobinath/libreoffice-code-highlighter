@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description xmlns   = "http://openoffice.org/extensions/description/2006"
-             xmlns:d = "http://openoffice.org/extensions/description/2006"
-             xmlns:l = "http://libreoffice.org/extensions/description/2011"
-             xmlns:xlink="http://www.w3.org/1999/xlink"
-             >
-    <version value="1.3"/>
-    <identifier value="javahelps.codehighlighter"/>
-
+<description xmlns   = "http://openoffice.org/extensions/description/2006"             
+  xmlns:d = "http://openoffice.org/extensions/description/2006"             
+  xmlns:l = "http://libreoffice.org/extensions/description/2011" 
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <version value="1.4"/>
+  <identifier value="javahelps.codehighlighter"/>
   <icon>
     <default xlink:href="images/icon_48.png" />
   </icon>
@@ -18,17 +16,13 @@
     <src xlink:href="description/desc_en.txt"/>
     <src xlink:href="description/desc_en.txt" lang="en" />
   </extension-description>
-
-
-<dependencies>
-        <l:LibreOffice-minimal-version value="2.4" d:name="LibreOffice.org or Open Office 2.4" />
-    </dependencies>
-
-       <registration>
-      <simple-license accept-by="admin" >
-        <license-text xlink:href="license/license.txt" />
-        <license-text xlink:href="license/license.txt" lang="en-US" />
-      </simple-license>
-    </registration>
-
+  <dependencies>
+    <l:LibreOffice-minimal-version value="4.0" d:name="LibreOffice.org or Open Office 4.0" />
+  </dependencies>
+  <registration>
+    <simple-license accept-by="admin">
+      <license-text xlink:href="license/license.txt" />
+      <license-text xlink:href="license/license.txt" lang="en-US" />
+    </simple-license>
+  </registration>
 </description>
