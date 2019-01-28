@@ -36,25 +36,38 @@ def to_rgbint(hex_str):
     return rgb(0, 0, 0)
 
 
+def log(msg):
+    with open("/tmp/code-highlighter.log", "a") as text_file:
+        text_file.write(str(msg) + "\r\n\r\n")
+
+
 def highlightSourceCode(lang, style):
     ctx = XSCRIPTCONTEXT
     doc = ctx.getDocument()
     # Get the selected item
     selected_item = doc.getCurrentController().getSelection()
-    for item_idx in range(selected_item.getCount()):
-        code_block = selected_item.getByIndex(item_idx)
-        if 'com.sun.star.drawing.Text' in code_block.SupportedServiceNames:
-            # TextBox
-            # highlight_code(style, lang, code_block)
-            code = code_block.String
-            cursor = code_block.createTextCursor()
-            cursor.gotoStart(False)
-        else:
-            # Plain text
-            # highlight_code_string(style, lang, code_block)
-            code = code_block.getString()
-            cursor = code_block.getText().createTextCursorByRange(code_block)
-            cursor.goLeft(0, False)
+    if hasattr(selected_item, 'getCount'):
+        for item_idx in range(selected_item.getCount()):
+            code_block = selected_item.getByIndex(item_idx)
+            if 'com.sun.star.drawing.Text' in code_block.SupportedServiceNames:
+                # TextBox
+                # highlight_code(style, lang, code_block)
+                code = code_block.String
+                cursor = code_block.createTextCursor()
+                cursor.gotoStart(False)
+            else:
+                # Plain text
+                # highlight_code_string(style, lang, code_block)
+                code = code_block.getString()
+                cursor = code_block.getText().createTextCursorByRange(code_block)
+                cursor.goLeft(0, False)
+            highlight_code(code, cursor, lang, style)
+    elif hasattr(selected_item, 'SupportedServiceNames') and 'com.sun.star.text.TextCursor' in selected_item.SupportedServiceNames:
+        # LO Impress text selection
+        code_block = selected_item
+        code = code_block.getString()
+        cursor = code_block.getText().createTextCursorByRange(code_block)
+        cursor.goLeft(0, False)
         highlight_code(code, cursor, lang, style)
 
 
@@ -74,8 +87,10 @@ def highlight_code(code, cursor, lang, style):
         finally:
             cursor.goRight(0, False)  # deselects the selected text
 
+
 def highlight_automatic_default(*args):
     highlightSourceCode(None, 'default')
+
 
 def highlight_abap_default(*args):
     highlightSourceCode('abap', 'default')
@@ -252,8 +267,10 @@ def highlight_c_objdump_default(*args):
 def highlight_c_default(*args):
     highlightSourceCode('c', 'default')
 
+
 def highlight_cpp_default(*args):
     highlightSourceCode('cpp', 'default')
+
 
 def highlight_ca65_default(*args):
     highlightSourceCode('ca65', 'default')
