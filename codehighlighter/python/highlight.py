@@ -44,7 +44,12 @@ def log(msg):
         text_file.write(str(msg) + "\r\n\r\n")
 
 def create_dialog():
+    # get_all_lexers() returns:
+    # (longname, tuple of aliases, tuple of filename patterns, tuple of mimetypes)
     all_lexers = [lex[0] for lex in get_all_lexers()]
+    all_lexer_aliases = [lex[0] for lex in get_all_lexers()]
+    for lex in get_all_lexers():
+        all_lexer_aliases.extend(list(lex[1]))
     all_styles = list(get_all_styles())
 
     ctx = uno.getComponentContext()
@@ -74,7 +79,7 @@ def create_dialog():
     style = cb_style.Text
     if lang == 'automatic':
         lang = None
-    assert lang == None or (lang in all_lexers), 'no valid language: ' + lang
+    assert lang == None or (lang in all_lexer_aliases), 'no valid language: ' + lang
     assert style in all_styles, 'no valid style: ' + style
 
     highlightSourceCode(lang, style)
