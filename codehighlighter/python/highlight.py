@@ -23,6 +23,7 @@ from pygments.lexers import get_all_lexers
 from pygments.lexers import get_lexer_by_name
 from pygments.lexers import guess_lexer
 from pygments.styles import get_all_styles
+import pygments.util
 import os
 
 
@@ -124,7 +125,17 @@ def highlight_code(code, cursor, lang, style):
     if lang is None:
         lexer = guess_lexer(code)
     else:
-        lexer = get_lexer_by_name(lang)
+        try:
+            lexer = get_lexer_by_name(lang)
+        except pygments.util.ClassNotFound:
+            # get_lexer_by_name() only checks aliases, not the actual longname
+            for lex in get_all_lexers():
+                if lex[0] == lang:
+                    # found the longname, use the first alias
+                    lexer = get_lexer_by_name(lex[1][0])
+                    break
+            else:
+                raise
     style = styles.get_style_by_name(style)
     for tok_type, tok_value in lexer.get_tokens(code):
         cursor.goRight(len(tok_value), True)  # selects the token's text
