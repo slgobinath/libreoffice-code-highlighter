@@ -79,6 +79,12 @@ def create_dialog():
 
     highlightSourceCode(lang, style)
 
+def key_pressed(event):
+    if event.KeyCode == 1280:
+        # enter
+        dialog = event.Source.getContext()
+        dialog.endDialog(1)
+
 def highlightSourceCode(lang, style):
     ctx = XSCRIPTCONTEXT
     doc = ctx.getDocument()
