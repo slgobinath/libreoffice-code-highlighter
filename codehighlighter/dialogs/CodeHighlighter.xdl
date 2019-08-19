@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dlg:window PUBLIC "-//OpenOffice.org//DTD OfficeDocument 1.0//EN" "dialog.dtd">
+<dlg:window xmlns:dlg="http://openoffice.org/2000/dialog" xmlns:script="http://openoffice.org/2000/script" dlg:id="CodeHighlighter" dlg:left="203" dlg:top="169" dlg:width="175" dlg:height="148" dlg:closeable="true" dlg:moveable="true">
+ <dlg:bulletinboard>
+  <dlg:text dlg:id="Label1" dlg:tab-index="2" dlg:left="20" dlg:top="6" dlg:width="60" dlg:height="10" dlg:value="Language"/>
+  <dlg:text dlg:id="Label2" dlg:tab-index="3" dlg:left="20" dlg:top="60" dlg:width="60" dlg:height="10" dlg:value="Style"/>
+  <dlg:button dlg:id="CommandButton1" dlg:tab-index="4" dlg:left="102" dlg:top="125" dlg:width="52" dlg:height="16" dlg:value="OK" dlg:button-type="ok"/>
+  <dlg:button dlg:id="CommandButton2" dlg:tab-index="5" dlg:left="20" dlg:top="125" dlg:width="52" dlg:height="16" dlg:value="Cancel" dlg:button-type="cancel"/>
+  <dlg:combobox dlg:id="cb_lang" dlg:tab-index="0" dlg:left="20" dlg:top="24" dlg:width="100" dlg:height="12" dlg:spin="true"/>
+  <dlg:combobox dlg:id="cb_style" dlg:tab-index="1" dlg:left="20" dlg:top="78" dlg:width="100" dlg:height="12" dlg:spin="true"/>
+ </dlg:bulletinboard>
+</dlg:window>
