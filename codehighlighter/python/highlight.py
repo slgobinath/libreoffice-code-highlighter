@@ -17,6 +17,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import uno
+from com.sun.star.awt.Key import RETURN as KEY_RETURN
 
 from pygments import styles
 from pygments.lexers import get_all_lexers
@@ -86,8 +87,8 @@ def create_dialog():
     highlightSourceCode(lang, style)
 
 def key_pressed(event):
-    if event.KeyCode == 1280:
-        # enter
+    if event.KeyCode == KEY_RETURN:
+        # handle 'return key press' like OK button
         dialog = event.Source.getContext()
         dialog.endDialog(1)
 
