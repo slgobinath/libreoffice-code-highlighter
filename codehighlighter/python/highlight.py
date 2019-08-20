@@ -18,6 +18,8 @@
 
 import uno
 from com.sun.star.awt.Key import RETURN as KEY_RETURN
+from com.sun.star.awt.FontSlant import NONE as SL_NONE, ITALIC as SL_ITALIC
+from com.sun.star.awt.FontWeight import NORMAL as W_NORMAL, BOLD as W_BOLD
 
 from pygments import styles
 from pygments.lexers import get_all_lexers
@@ -141,8 +143,10 @@ def highlight_code(code, cursor, lang, style):
     for tok_type, tok_value in lexer.get_tokens(code):
         cursor.goRight(len(tok_value), True)  # selects the token's text
         try:
-            cursor.CharColor = to_rgbint(
-                style.style_for_token(tok_type)['color'])
+            tok_style = style.style_for_token(tok_type)
+            cursor.CharColor = to_rgbint(tok_style['color'])
+            cursor.CharWeight = W_BOLD if tok_style['bold'] else W_NORMAL
+            cursor.CharPosture = SL_ITALIC if tok_style['italic'] else SL_NONE
         except:
             pass
         finally:
