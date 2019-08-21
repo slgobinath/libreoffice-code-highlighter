@@ -66,6 +66,7 @@ def create_dialog():
 
     cb_lang = dialog.getControl('cb_lang')
     cb_style = dialog.getControl('cb_style')
+    check_col_bg = dialog.getControl('check_col_bg')
 
     cb_lang.addItem('automatic', 0)
     cb_lang.Text = 'automatic'
@@ -84,12 +85,13 @@ def create_dialog():
 
     lang = cb_lang.Text
     style = cb_style.Text
+    colorize_bg = (check_col_bg.State != 0)
     if lang == 'automatic':
         lang = None
     assert lang == None or (lang in all_lexer_aliases), 'no valid language: ' + lang
     assert style in all_styles, 'no valid style: ' + style
 
-    highlightSourceCode(lang, style)
+    highlightSourceCode(lang, style, colorize_bg)
 
 def key_pressed(event):
     if event.KeyCode == KEY_RETURN:
@@ -97,8 +99,9 @@ def key_pressed(event):
         dialog = event.Source.getContext()
         dialog.endDialog(1)
 
-def highlightSourceCode(lang, style):
+def highlightSourceCode(lang, style, colorize_bg=False):
     style = styles.get_style_by_name(style)
+    bg_color = style.background_color if colorize_bg else None
 
     ctx = XSCRIPTCONTEXT
     doc = ctx.getDocument()
@@ -111,17 +114,17 @@ def highlightSourceCode(lang, style):
                 # TextBox
                 # highlight_code(style, lang, code_block)
                 code_block.FillStyle = FS_NONE
-                if style.background_color:
+                if bg_color:
                     code_block.FillStyle = FS_SOLID
-                    code_block.FillColor = to_rgbint(style.background_color)
+                    code_block.FillColor = to_rgbint(bg_color)
                 code = code_block.String
                 cursor = code_block.createTextCursor()
                 cursor.gotoStart(False)
             else:
                 # Plain text
                 # highlight_code_string(style, lang, code_block)
-                if style.background_color:
-                    code_block.ParaBackColor = to_rgbint(style.background_color)
+                if bg_color:
+                    code_block.ParaBackColor = to_rgbint(bg_color)
                 code = code_block.getString()
                 cursor = code_block.getText().createTextCursorByRange(code_block)
                 cursor.goLeft(0, False)
