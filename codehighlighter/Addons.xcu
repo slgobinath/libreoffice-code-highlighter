@@ -35,7 +35,7 @@
                         <value>AddLast</value>
                     </prop>
                     <node oor:name="MenuItems">
-                        <node oor:name="highlight_code" oor:op="replace">
+                        <node oor:name="hl_dialog" oor:op="replace">
                             <prop oor:name="Context" oor:type="xs:string">
                                 <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
                             </prop>
@@ -49,7 +49,21 @@
                                 <value>_self</value>
                             </prop>
                         </node>
-                        <node oor:name="codehighlighter_menu" oor:op="replace">
+                        <node oor:name="hl_previous_settings" oor:op="replace">
+                            <prop oor:name="Context" oor:type="xs:string">
+                                <value>com.sun.star.text.TextDocument,com.sun.star.sdb.TextReportDesign,com.sun.star.text.WebDocument,com.sun.star.xforms.XMLFormDocument,com.sun.star.text.GlobalDocument,com.sun.star.sdb.FormDesign,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.sdb.OfficeDatabaseDocument</value>
+                            </prop>
+                            <prop oor:name="Title" oor:type="xs:string">
+                                <value xml:lang="en">Highlight Code (previous settings)</value>
+                            </prop>
+                            <prop oor:name="URL" oor:type="xs:string">
+                                <value>vnd.sun.star.script:codehighlighter.oxt|python|highlight.py$apply_previous_settings?language=Python&amp;location=user:uno_packages</value>
+                            </prop>
+                            <prop oor:name="Target" oor:type="xs:string">
+                                <value>_self</value>
+                            </prop>
+                        </node>
+                        <node oor:name="codehighlighter_menu_default" oor:op="replace">
                             <prop oor:name="Target" oor:type="xs:string">
                                 <value>_self</value>
                             </prop>
