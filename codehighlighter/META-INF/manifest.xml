@@ -3,4 +3,6 @@
   xmlns:manifest="http://openoffice.org/2001/manifest">
   <manifest:file-entry manifest:media-type="application/vnd.sun.star.framework-script" manifest:full-path="python"/>
   <manifest:file-entry manifest:media-type="application/vnd.sun.star.configuration-data" manifest:full-path="Addons.xcu"/>
+  <manifest:file-entry manifest:full-path="AddonRegistry.xcs" manifest:media-type="application/vnd.sun.star.configuration-schema"/> 
+  <manifest:file-entry manifest:full-path="AddonRegistry.xcu" manifest:media-type="application/vnd.sun.star.configuration-data"/>
 </manifest:manifest>

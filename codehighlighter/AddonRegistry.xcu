@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<oor:component-data xmlns:oor="http://openoffice.org/2001/registry" xmlns:xs="http://www.w3.org/2001/XMLSchema" oor:name="Registry" oor:package="ooo.ext.code-highlighter">
+  <node oor:name="Settings">
+    <prop oor:name="Language" oor:type="xs:string">
+      <value>automatic</value>
+    </prop>
+    <prop oor:name="Style" oor:type="xs:string">
+      <value>default</value>
+    </prop>
+    <prop oor:name="ColorizeBackground" oor:type="xs:string">
+      <value>1</value>
+    </prop>
+  </node>
+</oor:component-data>

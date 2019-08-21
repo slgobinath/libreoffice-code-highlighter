@@ -22,6 +22,8 @@ from com.sun.star.drawing.FillStyle import NONE as FS_NONE, SOLID as FS_SOLID
 from com.sun.star.awt.FontSlant import NONE as SL_NONE, ITALIC as SL_ITALIC
 from com.sun.star.awt.FontWeight import NORMAL as W_NORMAL, BOLD as W_BOLD
 
+from com.sun.star.beans import PropertyValue
+
 from pygments import styles
 from pygments.lexers import get_all_lexers
 from pygments.lexers import get_lexer_by_name
@@ -64,19 +66,28 @@ def create_dialog():
     dialog_provider = smgr.createInstance("com.sun.star.awt.DialogProvider")
     dialog = dialog_provider.createDialog("vnd.sun.star.extension://javahelps.codehighlighter/dialogs/CodeHighlighter.xdl")
 
+    cfg = smgr.createInstanceWithContext('com.sun.star.configuration.ConfigurationProvider', ctx)
+    prop = PropertyValue()
+    prop.Name = 'nodepath'
+    prop.Value = '/ooo.ext.code-highlighter.Registry/Settings'
+    cfg_access = cfg.createInstanceWithArguments('com.sun.star.configuration.ConfigurationUpdateAccess', (prop,))
+
     cb_lang = dialog.getControl('cb_lang')
     cb_style = dialog.getControl('cb_style')
     check_col_bg = dialog.getControl('check_col_bg')
 
     cb_lang.addItem('automatic', 0)
-    cb_lang.Text = 'automatic'
+    cb_lang.Text = cfg_access.getPropertyValue('Language')
     for i, lex in enumerate(all_lexers):
         cb_lang.addItem(lex, i+1)
 
-    if 'default' in all_styles:
-        cb_style.Text = 'default'
+    style = cfg_access.getPropertyValue('Style')
+    if style in all_styles:
+        cb_style.Text = style
     for i, style in enumerate(all_styles):
         cb_style.addItem(style, i)
+
+    check_col_bg.State = int(cfg_access.getPropertyValue('ColorizeBackground'))
 
     dialog.setVisible(True)
     # 0: canceled, 1: OK
@@ -85,13 +96,18 @@ def create_dialog():
 
     lang = cb_lang.Text
     style = cb_style.Text
-    colorize_bg = (check_col_bg.State != 0)
+    colorize_bg = check_col_bg.State
     if lang == 'automatic':
         lang = None
     assert lang == None or (lang in all_lexer_aliases), 'no valid language: ' + lang
     assert style in all_styles, 'no valid style: ' + style
 
-    highlightSourceCode(lang, style, colorize_bg)
+    cfg_access.setPropertyValue('Style', style)
+    cfg_access.setPropertyValue('Language', lang or 'automatic')
+    cfg_access.setPropertyValue('ColorizeBackground', str(colorize_bg))
+    cfg_access.commitChanges()
+
+    highlightSourceCode(lang, style, colorize_bg != 0)
 
 def key_pressed(event):
     if event.KeyCode == KEY_RETURN:
