@@ -16,10 +16,14 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+import uno
+
 from pygments import styles
+from pygments.lexers import get_all_lexers
 from pygments.lexers import get_lexer_by_name
 from pygments.lexers import guess_lexer
 from pygments.styles import get_all_styles
+import pygments.util
 import os
 
 
@@ -40,6 +44,52 @@ def log(msg):
     with open("/tmp/code-highlighter.log", "a") as text_file:
         text_file.write(str(msg) + "\r\n\r\n")
 
+def create_dialog():
+    # get_all_lexers() returns:
+    # (longname, tuple of aliases, tuple of filename patterns, tuple of mimetypes)
+    all_lexers = [lex[0] for lex in get_all_lexers()]
+    all_lexer_aliases = [lex[0] for lex in get_all_lexers()]
+    for lex in get_all_lexers():
+        all_lexer_aliases.extend(list(lex[1]))
+    all_styles = list(get_all_styles())
+
+    ctx = uno.getComponentContext()
+    smgr = ctx.ServiceManager
+    dialog_provider = smgr.createInstance("com.sun.star.awt.DialogProvider")
+    dialog = dialog_provider.createDialog("vnd.sun.star.extension://javahelps.codehighlighter/dialogs/CodeHighlighter.xdl")
+
+    cb_lang = dialog.getControl('cb_lang')
+    cb_style = dialog.getControl('cb_style')
+
+    cb_lang.addItem('automatic', 0)
+    cb_lang.Text = 'automatic'
+    for i, lex in enumerate(all_lexers):
+        cb_lang.addItem(lex, i+1)
+
+    if 'default' in all_styles:
+        cb_style.Text = 'default'
+    for i, style in enumerate(all_styles):
+        cb_style.addItem(style, i)
+
+    dialog.setVisible(True)
+    # 0: canceled, 1: OK
+    if dialog.execute() == 0:
+        return
+
+    lang = cb_lang.Text
+    style = cb_style.Text
+    if lang == 'automatic':
+        lang = None
+    assert lang == None or (lang in all_lexer_aliases), 'no valid language: ' + lang
+    assert style in all_styles, 'no valid style: ' + style
+
+    highlightSourceCode(lang, style)
+
+def key_pressed(event):
+    if event.KeyCode == 1280:
+        # enter
+        dialog = event.Source.getContext()
+        dialog.endDialog(1)
 
 def highlightSourceCode(lang, style):
     ctx = XSCRIPTCONTEXT
@@ -75,7 +125,17 @@ def highlight_code(code, cursor, lang, style):
     if lang is None:
         lexer = guess_lexer(code)
     else:
-        lexer = get_lexer_by_name(lang)
+        try:
+            lexer = get_lexer_by_name(lang)
+        except pygments.util.ClassNotFound:
+            # get_lexer_by_name() only checks aliases, not the actual longname
+            for lex in get_all_lexers():
+                if lex[0] == lang:
+                    # found the longname, use the first alias
+                    lexer = get_lexer_by_name(lex[1][0])
+                    break
+            else:
+                raise
     style = styles.get_style_by_name(style)
     for tok_type, tok_value in lexer.get_tokens(code):
         cursor.goRight(len(tok_value), True)  # selects the token's text
