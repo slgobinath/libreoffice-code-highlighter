@@ -18,6 +18,7 @@
 
 import uno
 from com.sun.star.awt.Key import RETURN as KEY_RETURN
+from com.sun.star.drawing.FillStyle import NONE as FS_NONE, SOLID as FS_SOLID
 from com.sun.star.awt.FontSlant import NONE as SL_NONE, ITALIC as SL_ITALIC
 from com.sun.star.awt.FontWeight import NORMAL as W_NORMAL, BOLD as W_BOLD
 
@@ -36,6 +37,8 @@ def rgb(r, g, b):
 
 def to_rgbint(hex_str):
     if hex_str:
+        # the background color starts with #, the foreground colors don't
+        hex_str = hex_str.lstrip('#')
         r = int(hex_str[:2], 16)
         g = int(hex_str[2:4], 16)
         b = int(hex_str[4:], 16)
@@ -95,6 +98,8 @@ def key_pressed(event):
         dialog.endDialog(1)
 
 def highlightSourceCode(lang, style):
+    style = styles.get_style_by_name(style)
+
     ctx = XSCRIPTCONTEXT
     doc = ctx.getDocument()
     # Get the selected item
@@ -105,12 +110,18 @@ def highlightSourceCode(lang, style):
             if 'com.sun.star.drawing.Text' in code_block.SupportedServiceNames:
                 # TextBox
                 # highlight_code(style, lang, code_block)
+                code_block.FillStyle = FS_NONE
+                if style.background_color:
+                    code_block.FillStyle = FS_SOLID
+                    code_block.FillColor = to_rgbint(style.background_color)
                 code = code_block.String
                 cursor = code_block.createTextCursor()
                 cursor.gotoStart(False)
             else:
                 # Plain text
                 # highlight_code_string(style, lang, code_block)
+                if style.background_color:
+                    code_block.ParaBackColor = to_rgbint(style.background_color)
                 code = code_block.getString()
                 cursor = code_block.getText().createTextCursorByRange(code_block)
                 cursor.goLeft(0, False)
@@ -139,7 +150,6 @@ def highlight_code(code, cursor, lang, style):
                     break
             else:
                 raise
-    style = styles.get_style_by_name(style)
     for tok_type, tok_value in lexer.get_tokens(code):
         cursor.goRight(len(tok_value), True)  # selects the token's text
         try:
