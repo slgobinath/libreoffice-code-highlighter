@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE dlg:window PUBLIC "-//OpenOffice.org//DTD OfficeDocument 1.0//EN" "dialog.dtd">
-<dlg:window xmlns:dlg="http://openoffice.org/2000/dialog" xmlns:script="http://openoffice.org/2000/script" dlg:id="CodeHighlighter" dlg:left="203" dlg:top="169" dlg:width="175" dlg:height="148" dlg:closeable="true" dlg:moveable="true">
+<dlg:window xmlns:dlg="http://openoffice.org/2000/dialog" xmlns:script="http://openoffice.org/2000/script" dlg:id="CodeHighlighter" dlg:left="203" dlg:top="169" dlg:width="175" dlg:height="144" dlg:closeable="true" dlg:moveable="true">
  <dlg:bulletinboard>
-  <dlg:text dlg:id="Label1" dlg:tab-index="2" dlg:left="20" dlg:top="6" dlg:width="60" dlg:height="10" dlg:value="Language">
+  <dlg:text dlg:id="Label1" dlg:tab-index="0" dlg:left="20" dlg:top="6" dlg:width="60" dlg:height="10" dlg:value="Language">
    <script:event script:event-name="on-keydown" script:macro-name="vnd.sun.star.script:codehighlighter.oxt|python|highlight.py$key_pressed?language=Python&amp;location=user:uno_packages" script:language="Script"/>
   </dlg:text>
-  <dlg:text dlg:id="Label2" dlg:tab-index="3" dlg:left="20" dlg:top="60" dlg:width="60" dlg:height="10" dlg:value="Style">
+  <dlg:text dlg:id="Label2" dlg:tab-index="2" dlg:left="20" dlg:top="50" dlg:width="60" dlg:height="10" dlg:value="Style">
    <script:event script:event-name="on-keydown" script:macro-name="vnd.sun.star.script:codehighlighter.oxt|python|highlight.py$key_pressed?language=Python&amp;location=user:uno_packages" script:language="Script"/>
   </dlg:text>
-  <dlg:button dlg:id="CommandButton1" dlg:tab-index="4" dlg:left="102" dlg:top="125" dlg:width="52" dlg:height="16" dlg:value="OK" dlg:button-type="ok"/>
-  <dlg:button dlg:id="CommandButton2" dlg:tab-index="5" dlg:left="20" dlg:top="125" dlg:width="52" dlg:height="16" dlg:value="Cancel" dlg:button-type="cancel"/>
-  <dlg:combobox dlg:id="cb_lang" dlg:tab-index="0" dlg:left="20" dlg:top="24" dlg:width="100" dlg:height="12" dlg:spin="true">
+  <dlg:button dlg:id="CommandButton1" dlg:tab-index="6" dlg:left="102" dlg:top="120" dlg:width="52" dlg:height="16" dlg:value="OK" dlg:button-type="ok"/>
+  <dlg:button dlg:id="CommandButton2" dlg:tab-index="7" dlg:left="20" dlg:top="120" dlg:width="52" dlg:height="16" dlg:value="Cancel" dlg:button-type="cancel"/>
+  <dlg:combobox dlg:id="cb_lang" dlg:tab-index="1" dlg:left="20" dlg:top="22" dlg:width="100" dlg:height="12" dlg:spin="true">
    <script:event script:event-name="on-keydown" script:macro-name="vnd.sun.star.script:codehighlighter.oxt|python|highlight.py$key_pressed?language=Python&amp;location=user:uno_packages" script:language="Script"/>
   </dlg:combobox>
-  <dlg:combobox dlg:id="cb_style" dlg:tab-index="1" dlg:left="20" dlg:top="78" dlg:width="100" dlg:height="12" dlg:spin="true">
+  <dlg:combobox dlg:id="cb_style" dlg:tab-index="3" dlg:left="20" dlg:top="66" dlg:width="100" dlg:height="12" dlg:spin="true">
    <script:event script:event-name="on-keydown" script:macro-name="vnd.sun.star.script:codehighlighter.oxt|python|highlight.py$key_pressed?language=Python&amp;location=user:uno_packages" script:language="Script"/>
   </dlg:combobox>
+  <dlg:checkbox dlg:id="check_col_bg" dlg:tab-index="4" dlg:left="20" dlg:top="90" dlg:width="8" dlg:height="10" dlg:help-text="Use the background color provided by the style." dlg:valign="center" dlg:checked="true">
+   <script:event script:event-name="on-keydown" script:macro-name="vnd.sun.star.script:codehighlighter.oxt|python|highlight.py$key_pressed?language=Python&amp;location=user:uno_packages" script:language="Script"/>
+  </dlg:checkbox>
+  <dlg:text dlg:id="Label3" dlg:tab-index="5" dlg:left="30" dlg:top="90" dlg:width="87" dlg:height="10" dlg:help-text="Use the background color provided by the style." dlg:value="Set background color" dlg:valign="center">
+   <script:event script:event-name="on-keydown" script:macro-name="vnd.sun.star.script:codehighlighter.oxt|python|highlight.py$key_pressed?language=Python&amp;location=user:uno_packages" script:language="Script"/>
+  </dlg:text>
  </dlg:bulletinboard>
 </dlg:window>

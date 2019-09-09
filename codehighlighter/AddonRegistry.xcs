@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<oor:component-schema oor:name="Registry" oor:package="ooo.ext.code-highlighter" xml:lang="en-US" xmlns:oor="http://openoffice.org/2001/registry" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <component>
+    <group oor:name="Settings">
+      <prop oor:name="Language" oor:type="xs:string"/>
+      <prop oor:name="Style" oor:type="xs:string"/>
+      <prop oor:name="ColorizeBackground" oor:type="xs:string"/>
+    </group>
+  </component>
+</oor:component-schema>
