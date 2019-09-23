@@ -32,7 +32,7 @@ Check this [StackOverflow Answer](https://stackoverflow.com/a/4855685/4382663) t
 ### Install Extension
 Open LibreOffice, go to `Tools` -> `Extension Manager...` and add the extension `codehighlighter.oxt`
 
-You can download the extension either from the official LibreOffice extensions page or from [releases](https://github.com/slgobinath/libreoffice-code-highlighter/files/971882/codehighlighter.oxt.zip).
+You can download the extension either from the official LibreOffice extensions page or from [releases](https://github.com/slgobinath/libreoffice-code-highlighter/releases).
 If you have downloaded the `codehighlighter.oxt.zip` file from GitHub releases, extract it before adding to the LibreOffice.
 
 ## USAGE
