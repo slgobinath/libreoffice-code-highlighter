@@ -2,7 +2,8 @@
 Code snippet highlighter for LibreOffice Writer and Impress.
 
 
-## This project is archived and no longer. There is an active fork of this project available
+## Archived
+This project is archived and no longer. There is an active fork of this project available
 at https://github.com/jmzambon/libreoffice-code-highlighter 
 I highly recommend any existing or future users to switch to this forked version as I do not
 have time anymore to maintain this project.
