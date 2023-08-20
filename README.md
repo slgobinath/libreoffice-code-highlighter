@@ -1,6 +1,16 @@
 # libreoffice-code-highlighter
 Code snippet highlighter for LibreOffice Writer and Impress.
 
+
+## This project is archived and no longer. There is an active fork of this project available
+at https://github.com/jmzambon/libreoffice-code-highlighter 
+I highly recommend any existing or future users to switch to this forked version as I do not
+have time anymore to maintain this project.
+
+Unfortunately my old LibreOffice Extensions account credentials do not work anymore (or I have
+the wrong one). If anyone has contacts in LibreOffice, please bring down the original extension
+from https://extensions.libreoffice.org/en/extensions/show/code-highlighter
+
 ## INSTALLATION
 
 ### Install Dependencies
